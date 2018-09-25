@@ -31,7 +31,11 @@ class Formulario extends Component {
   render() {
     const categorias = Object.keys(this.props.categorias);
     return (
-      <form onSubmit={this.buscarEvento}>
+      <form
+        onSubmit={this.buscarEvento}
+        className="needs-validation"
+        novalidate
+      >
         <legend className="mb-4">Busca tu evento por nombre o categoria</legend>
         <div className="form-row">
           <div className="col">
@@ -40,6 +44,7 @@ class Formulario extends Component {
               type="text"
               className="form-control"
               placeholder="Nombre de Evento o Ciudad"
+              required
             />
           </div>
           <div className="col">
